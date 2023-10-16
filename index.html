@@ -2,12 +2,43 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Giphy Party!</title>
+    <meta charset="UTF-8">
+    <title>Giphy Party!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+<div class="container ">
+    <h1 class="text-center mb-5">GIPHY PARTY!</h1>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-floating">
+                <input class="form-control" id="search-term" placeholder="crazy monkey" type="text">
+                <label for="search-term">Search</label>
+            </div>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-xl btn-success rounded py-3" id="submit">Submit</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center" id="found-images">
+        <h1 class="display-1 text-center p-5 text-secondary">FOUND IMAGES</h1>
+    </div>
+    <div class="row justify-content-end mt-3 ">
+        <button class="btn btn-sm btn-info col-2 disabled mx-3" id="random">PICK A RANDOM IMAGE</button>
+        <button class="btn btn-sm btn-danger col-1 disabled" id="clear">CLEAR</button>
+    </div>
 
+
+    <hr>
+    <div class="row">
+        <h2>IMAGES YOU SAVED...</h2>
+    </div>
+    <div id="saved-images"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>
 <script src="app.js"></script>
